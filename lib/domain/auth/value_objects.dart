@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:ddd_todo/a_core/failures/failures.dart';
+import 'package:ddd_todo/a_core/exceptions/failures.dart';
 import 'package:ddd_todo/a_core/validators/value_object.dart';
 import 'package:ddd_todo/a_core/validators/value_validators.dart';
 
