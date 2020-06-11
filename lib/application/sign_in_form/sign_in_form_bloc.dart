@@ -81,7 +81,10 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
         authFailureOrSuccessOption: none(),
       );
 
-      _authFailureOrSuccess = await forwardedCall();
+      _authFailureOrSuccess = await forwardedCall(
+        emailAddress: state.emailAddress,
+        password: state.password,
+      );
     }
 
     yield state.copyWith(
