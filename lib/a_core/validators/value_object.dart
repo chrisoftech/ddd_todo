@@ -43,8 +43,9 @@ class UniqueId extends ValueObject<String> {
   }
 
   factory UniqueId.fromUniqueString(String uniqueId) {
+    assert(uniqueId != null, 'uniqueId cannot be null');
     return UniqueId._(
-      right(Uuid(uniqueId).toString()),
+      right(uniqueId),
     );
   }
 
