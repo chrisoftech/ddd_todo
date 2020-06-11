@@ -1,4 +1,3 @@
-
 import 'package:ddd_todo/application/auth/sign_in_form/sign_in_form_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -32,6 +31,7 @@ class SignInForm extends StatelessWidget {
         return Form(
           autovalidate: state.showErrorMessages,
           child: ListView(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
             children: <Widget>[
               const Text(
                 '📝',
@@ -119,7 +119,11 @@ class SignInForm extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-              )
+              ),
+              if (state.isSubmitting) ...[
+                const SizedBox(height: 8.0),
+                const LinearProgressIndicator(value: null),
+              ]
             ],
           ),
         );
