@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:ddd_todo/a_core/exceptions/errors.dart';
-import 'package:ddd_todo/a_core/exceptions/failures.dart';
+import 'package:ddd_todo/domain/core/exceptions/errors.dart';
+import 'package:ddd_todo/domain/core/failures/failures.dart';
 import 'package:flutter/foundation.dart';
 import 'package:uuid_type/uuid_type.dart';
 

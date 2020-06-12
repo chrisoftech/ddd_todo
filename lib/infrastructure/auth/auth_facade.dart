@@ -1,5 +1,3 @@
-import 'package:ddd_todo/a_core/exceptions/errors.dart';
-import 'package:ddd_todo/a_core/validators/value_object.dart';
 import 'package:ddd_todo/domain/auth/auth_failure.dart';
 import 'package:dartz/dartz.dart';
 import 'package:ddd_todo/domain/auth/i_auth_facade.dart';
@@ -10,8 +8,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
-
-import './firebase_user_mapper.dart';
+import 'package:ddd_todo/infrastructure/core/firebase_user_mapper.dart';
 
 @LazySingleton(as: IAuthFacade)
 class AuthFacade implements IAuthFacade {

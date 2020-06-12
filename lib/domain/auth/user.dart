@@ -1,4 +1,5 @@
-import 'package:ddd_todo/a_core/validators/value_object.dart';
+
+import 'package:ddd_todo/domain/core/validators/value_object.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'user.freezed.dart';
