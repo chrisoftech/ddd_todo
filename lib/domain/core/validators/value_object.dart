@@ -10,6 +10,10 @@ abstract class ValueObject<T> {
 
   Either<ValueFailure<T>, T> get value;
 
+  Either<ValueFailure<dynamic>, Unit> get failureOrUnit {
+    return value.fold((failure) => left(failure), (_) => right(unit));
+  }
+
   bool isValid() => value.isRight();
 
   /// throws [UnexpectedValueError] containing the value failure
